@@ -4,4 +4,5 @@ from django.apps import AppConfig
 
 
 class BlogConfig(AppConfig):
+    list_display = ['first_name', 'id']
     name = 'blog'

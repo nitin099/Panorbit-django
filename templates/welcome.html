@@ -1,3 +1,4 @@
+{% load crispy_forms_tags %}
 <!doctype html>
 <html>
      <head>
@@ -12,9 +13,17 @@
                 <div style="text-align:center;">
                     <h3>Welcome User</h3>
                 </div>
-                <input type="button" value="Log Out" id="logout" onclick="window.location.href='index.html'" />
-                <input style="float:right;" type="button" value="Edit" id="edit" onclick="window.location.href='edit.html'"  />
+                <!-- <input type="button" value="Log Out" id="logout" onclick="window.location.href='index.html'" /> -->
+                <a href="{{instance.id}}/update/" style="float:right;" class="btn btn-default" role="button">Edit</a>
             </form>
+            <div class="container">
+              <br/><br/><br/>
+              <div class="col-sm-6 col-sm-offset-3">
+              <form method="POST" action=""> {% csrf_token %}
+                  {{form|crispy}}
+                  <input type="submit" value="submit"/>
+                </div>
+              </form>
         </div>
     </body>
 </html>

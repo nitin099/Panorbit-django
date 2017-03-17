@@ -1,3 +1,4 @@
+{% load crispy_forms_tags %}
 <!doctype html>
 <html>
      <head>
@@ -6,9 +7,11 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet">
     </head>
+    {{logout}}
     <body>
         <div class="container">
             <form id="loginForm">
+            {{form|crispy}}
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email Address" required autofocus>
                 <input type="button" value="Generate OTP" id="gen_otp" onclick="window.location.href='signin.html'" />
             </form>

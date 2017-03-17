@@ -1,3 +1,4 @@
+{% load crispy_forms_tags %}
 <!doctype html>
 <html>
      <head>
@@ -9,8 +10,12 @@
     <body>
         <div class="container">
             <form id="loginForm">
-                <input type="password" id="inputOtp" class="form-control" placeholder="Enter OTP" required autofocus>
-                <input type="button" value="Sign In" id="sign_in" onclick="window.location.href='welcome.html'" />
+              <br/><br/><br/>
+              <p class="lead" > Login Form </p>
+              {{form|crispy}}
+              <input type="submit" value='submit'/>
+                <!-- <input type="password" id="inputOtp" class="form-control" placeholder="Enter OTP" required autofocus>
+                <input type="button" value="Sign In" id="sign_in" onclick="window.location.href='welcome.html'" /> -->
             </form>
         </div>
     </body>
