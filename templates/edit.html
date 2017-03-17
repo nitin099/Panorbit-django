@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <form id="loginForm">
+                <input type="text" id="inputFirstName" class="form-control" placeholder="First Name" required autofocus>
+                <input type="text" id="inputLastName" class="form-control" placeholder="Last Name" required autofocus>
+                <input type="text" id="inputFathersName" class="form-control" placeholder="Father's Name" required autofocus>
+                <select name="gender" class="form-control">
+                    <option value="" disabled selected>Gender</option> 
+                    <option value="Male">Male</option> 
+                    <option value="Female">Female</option> 
+                    <option value="Others">Others</option> 
+                </select> 
+                <input type="text" id="inputEmailId" class="form-control" placeholder="Email Id" required autofocus>
+                <input type="text" id="inputPhn" class="form-control" placeholder="Phone No" required autofocus>
+                <input type="text" id="inputSpouse" class="form-control" placeholder="Spouse Name" required autofocus>
+                <input type="button" value="Save" id="save" onclick="window.location.href='welcome.html'" />
+            </form>
+        </div>
+    </body>
+</html>
